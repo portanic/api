@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+// All the capabilities a plugin could have
+enum Capability {
+  CREATE_ISSUE = 0;
+}
+
+message PluginCapabilities {
+  repeated Capability capabilities = 1;
+}
+
+message GetCapabilitiesRequest {
+  string plugin_id = 1;
+}
+
+message GetCapabilitiesResponse {
+  bool success = 1;
+  string message = 2;
+  PluginCapabilities capabilities = 3;
+}
