@@ -2,7 +2,10 @@ syntax = "proto3";
 
 // All the capabilities a plugin could have
 enum Capability {
-  CREATE_ISSUE = 0;
+  DATA = 0;
+  BLOCK = 1;
+  PAGE = 2;
+  CREATE_ISSUE = 3;
 }
 
 message PluginCapabilities {
